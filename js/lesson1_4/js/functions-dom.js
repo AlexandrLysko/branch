@@ -3,7 +3,6 @@
 /*1.Написать функцию calc(a, b, operator), которая в зависимости от оператора будет складывать, умножать, вычитать или делить.
 Не забывайте про проверку типа введенных данных, и про деление на 0 (на 0 делить нельзя)*/
 
-
 function calc (a, b, operator){
 	if (typeof a !== "number" && typeof b !== "number") {
 		console.log("Error");
@@ -37,7 +36,6 @@ calc(5, 2, '-');
 
 /*2. Дано целое число n. Вычислите сумму его цифр. Использовать только рекурсию.*/
 
-
 function digit (n) {
   var cif = "" + n
   var sum = 0
@@ -45,7 +43,6 @@ function digit (n) {
     sum += +cif[i]
   console.log(sum); 
 }
-
 digit(255)
 
 
@@ -53,14 +50,13 @@ digit(255)
 /*3. (на замыкание)
 Написать функцию, которая возвращает новую функцию, которая увеличивает/уменьшает переданное число на указанный при карировании шаг.*/
 
-
-var a = 10; // число
-    var create = function(name) {
-       return function() {
-          console.log(a + name);
-       }
-    }
-    var result = create (2); // шаг
-    result();
+var a = 14; // число
+var create = function(x) {
+   return function() {
+	  console.log(a + x);
+   }
+}
+var result = create (2); // шаг
+result();
 
 

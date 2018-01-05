@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+.game_field{
+    width: 306px;
+    margin: 0 auto;
+}
+.game_field .block{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    float: left;
+    text-align: center;
+    font-size: 100px;
+    line-height: 94px;
+}
+
+button {
+	width: 100px;
+	height: 30px;
+}

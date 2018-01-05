@@ -4,31 +4,33 @@
 Не забывайте про проверку типа введенных данных, и про деление на 0 (на 0 делить нельзя)*/
 
 function calc (a, b, operator){
+	var result;
+	var metod;
 	if (typeof a !== "number" && typeof b !== "number") {
 		console.log("Error");
 		
 	} else if (operator === '+') {
-		var result = a + b;
-		console.log("Cумма");
+		result = a + b;
+		metod = "(Cумма)";
 				
 	} else if (operator === '-') {
-		var result = a - b;
-		console.log("Вычитаем");
+		result = a - b;
+		metod = "(Вычитаем)";
 		
 		
 	} else if (operator === '*') {
-		var result = a * b;
-		console.log("Умножаем");
+		result = a * b;
+		metod = "(Умножаем)";
 		
 		
 	} else if (operator === '/' && operator !== 0) {
-		var result = a / b;
-		console.log("Делим");
+		result = a / b;
+		metod = "(Делим)";
 		
-	}
+	} 
 	
-	console.log(result); 
-		return;
+	console.log("Задание 1: " + result + " " + metod); 
+		
 }
 
 calc(5, 2, '-');
@@ -36,15 +38,27 @@ calc(5, 2, '-');
 
 /*2. Дано целое число n. Вычислите сумму его цифр. Использовать только рекурсию.*/
 
-function digit (n) {
-  var cif = "" + n
-  var sum = 0
-  for (var i = 0; i < cif.length; i++) 
-    sum += +cif[i]
-  console.log(sum); 
-}
-digit(255)
+var digit = "125";
+digit.split(1);
+var a = digit[0] + digit[1];
+console.log(a);
 
+/*function sum(digit) {
+	var a = digit[0] + digit[1];
+	digit.splice(0, 1);
+	
+	if (digit.length > 0) {
+		sum(digit);
+	}
+}  console.log(sum);
+   sum(125);*/
+
+/*function sumTo(n) {
+  if (n == 1) return 1;
+  return n + sumTo(n - 1);
+}
+
+alert( sumTo(100) );*/
 
 
 /*3. (на замыкание)

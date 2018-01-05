@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+li {
+	list-style-type: none;
+	display: none;
+}
+
+.active {
+	display: block;
+	
+}

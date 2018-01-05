@@ -1,4 +1,4 @@
-// JavaScript Document
+// JavaScript Document готов
 /*В js файле создать объект handlers со следующими методами:
 startDraw
 endDraw

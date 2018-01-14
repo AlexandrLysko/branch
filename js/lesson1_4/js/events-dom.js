@@ -19,3 +19,22 @@ function copytext() {
 DOMContentLoaded
 beforeunload
 onload на отдельный элемент*/
+
+document.addEventListener('DOMContentLoaded', function(event) { // html страница загружена
+	console.log("Успешная загрузка страницы");
+});
+
+
+window.onbeforeunload = function() {
+    return "Изменения не сохранены. Покинуть страницу?";
+};
+
+
+window.addEventListener('load', function() { // Завершена загрузка всех элементов страницы
+		console.log("Все файлы загружены!");
+	});
+
+var img = new Image();
+img.onload = function() { alert('фото загружено'); }
+img.src = '/img.gif';
+

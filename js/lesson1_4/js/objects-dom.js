@@ -20,38 +20,32 @@ var city1 = {};
 	population: 150000,
 	mayor: 'Petroff',
 	};
-var populationMinus = city2.population - 50000;
-console.log("Добавляем популяцию:", city1.population + populationMinus);
+
+var populationMinus1 = city2.population - 500;
+console.log("Добавляем популяцию 1 способ:", city1.population + populationMinus1);
 
 
-/*	function showMayor(obj) {
-		console.log(obj.mayor);
-	}
-	showMayor(sity2);*/
+city1.populationMinus2 = function(x) {
+		city1.population += x;
+		city2.population = city2.population - x;
+	};
+	city1.populationMinus2(500);
+console.log("Добавляем популяцию 2 способ: ", city1.population, city2.population);
 
 
-// вызов функции
-/*showMayor.call(city2, "New Name");
-showMayor.call(city1, ["New Name", "..", ".."]);*/
+function callMayor(city) {
+		console.log("Мэр города ", city.name, city.mayor);
+}
+callMayor(city2);
 
 
-function changeMayor (new_val) {
-	this.mayor = new_val;
-	console.log(this.mayor);
-
-	}
-
-// привязка контекста
-var changeCity1 = changeMayor.bind(city1, "Новый мэр SPb Иван");
-var changeCity2 = changeMayor.bind(city2, "Новый мэр Moskow Петр");
-changeCity2();
-
-var president = {changeCountryMayor: function(city, new_name){
+var president = { changeCountryMayor: function(city, new_name){
 	city.mayor = new_name;
 }
 	
 };
-	//president.changeCountryMayor(city2, "m name");		 
+	president.changeCountryMayor(city1, "Sidoroff");
+	console.log("Новый мэр ", city1.name, city1.mayor);		 
 				  
 	
 

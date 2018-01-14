@@ -1,3 +1,4 @@
+'use strict'
 /*Задание 1
 1.1. создать 2 объекта sity1 и sity2 со следующими свойствами:
 name, population, mayor
@@ -23,12 +24,16 @@ var populationMinus = city2.population - 50000;
 console.log("Добавляем популяцию:", city1.population + populationMinus);
 
 
+/*	function showMayor(obj) {
+		console.log(obj.mayor);
+	}
+	showMayor(sity2);*/
+
+
 // вызов функции
 /*showMayor.call(city2, "New Name");
 showMayor.call(city1, ["New Name", "..", ".."]);*/
-/*function showMayor() {
-	if ()
-}*/
+
 
 function changeMayor (new_val) {
 	this.mayor = new_val;
@@ -86,9 +91,56 @@ console.log(substr, "Встречается в ", str, searchString (str, substr
 */
 
 
-(function runCalculator() {
-	'use strict';
-var promtRes = promt("Enter SMTh", " ");
-	promt("promptRes", promptRes, typeof promptRes );
-}());
+function runCalculator(){
+
+	var run  = confirm("Запустить программу?");
 	
+function getDataFromUser(){
+	
+ 	var arr = [2, "/", 3];
+	return arr;
+}
+
+		if (run === true) {
+			
+			var arr2 = getDataFromUser();
+			var a = arr2[0];
+			var znak= arr2[1];
+			var b = arr2[2];
+			
+			alert(operations(a, znak, b));
+
+	} else {
+		
+		alert("До новых встреч!");
+	}
+
+
+function operations(a, znak, b) {
+	
+	if (znak === '+') {
+		
+		return a + b;
+
+		} else if (znak === '-') { 
+		return a - b; 
+
+		} else if (znak === '*') { 
+		return a * b; 
+
+		} else if (znak === '/') {
+			
+
+			if (b !== 0) {
+
+				return a / b;
+			}
+
+			return ('Делить на ноль нельзя');
+	} 
+}
+
+
+}
+
+runCalculator();

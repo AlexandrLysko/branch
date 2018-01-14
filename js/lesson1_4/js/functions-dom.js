@@ -38,10 +38,6 @@ calc(5, 2, '-');
 
 /*2. Дано целое число n. Вычислите сумму его цифр. Использовать только рекурсию.*/
 
-/*var digit = "125";
-digit.split(1);
-var a = digit[0] + digit[1];
-console.log(a);*/
 
 var x = 129;
 function sumDigit(x) {

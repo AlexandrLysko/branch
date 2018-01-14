@@ -38,27 +38,21 @@ calc(5, 2, '-');
 
 /*2. Дано целое число n. Вычислите сумму его цифр. Использовать только рекурсию.*/
 
-var digit = "125";
+/*var digit = "125";
 digit.split(1);
 var a = digit[0] + digit[1];
-console.log(a);
+console.log(a);*/
 
-/*function sum(digit) {
-	var a = digit[0] + digit[1];
-	digit.splice(0, 1);
-	
-	if (digit.length > 0) {
-		sum(digit);
+var x = 129;
+function sumDigit(x) {
+	if (x < 10) {
+		return x;
+	} else {
+            return x % 10 + sumDigit((x - (x % 10)) / 10);
 	}
-}  console.log(sum);
-   sum(125);*/
-
-/*function sumTo(n) {
-  if (n == 1) return 1;
-  return n + sumTo(n - 1);
 }
 
-alert( sumTo(100) );*/
+console.log(sumDigit(x));
 
 
 /*3. (на замыкание)

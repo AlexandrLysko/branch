@@ -15,31 +15,6 @@ function copytext() {
 } 
 
 
-
-/*(function () {
-	"use strict";
-
-	// ЗАДАЧА 1
-	// keydown, keyup, keypress
-
-	var input = document.createElement('input');
-	input.setAttribute('type', 'text');
-	input.setAttribute('value', '');
-	input.setAttribute('placeholder', 'start type something');
-
-	var textarea = document.createElement('textarea');
-
-	document.getElementById('container').appendChild(input);
-	document.getElementById('container').appendChild(textarea);
-
-	input.addEventListener('keydown', copyText);
-	input.addEventListener('keypress', copyText);
-	input.addEventListener('keyup', copyText);
-	function copyText() {
-		textarea.value = input.value;
-}
-*/
-
 /*2. Написать по одной любой функции-обработчику на следующие события:
 DOMContentLoaded
 beforeunload
